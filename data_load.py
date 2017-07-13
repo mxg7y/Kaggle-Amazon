@@ -19,7 +19,7 @@ TAG_COUNT = 17
 Load train_v2.csv and tags are transformed into vector
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 def load_train():
-    df = pd.read_csv('input_datas/train_v2.csv')
+    df = pd.read_csv('input/train_v2.csv')
     #image_name,tags
     tag_count = 17
     for index, row in df.iterrows():
@@ -33,10 +33,10 @@ def load_train():
 def load_image(img_name):
 
     if 'tif' in img_name:
-        path = os.path.join('input_datas/train-tif-v2', img_name)
+        path = os.path.join('input/train-tif-v2', img_name)
         return io.imread(path)
     else:
-        path = os.path.join('input_datas/train-jpg', img_name)
+        path = os.path.join('input/train-jpg', img_name)
         img = io.imread(path)
         return img
 
